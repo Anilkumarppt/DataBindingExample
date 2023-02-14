@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="Home Screen"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/dataBinding2"
+        android:name="com.example.databindingexample.DataBinding"
+        android:label="DataBinding"
+        tools:layout="@layout/fragment_data_binding" />
+    <fragment
+        android:id="@+id/coroutineDemo"
+        android:name="com.example.databindingexample.coroutine.CoroutineDemo"
+        android:label="Coroutine Demo"
+        tools:layout="@layout/fragment_coroutine_demo" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.databindingexample.HomeFragment"
+        android:label="HomePage"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_coroutineDemo"
+            app:destination="@id/coroutineDemo"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+        <action
+            android:id="@+id/action_homeFragment_to_dataBinding2"
+            app:destination="@id/dataBinding2" />
+        <action
+            android:id="@+id/action_homeFragment_to_roomFragment"
+            app:destination="@id/roomFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+        <action
+            android:id="@+id/action_homeFragment_to_postsFragment"
+            app:destination="@id/postsFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+        <action
+            android:id="@+id/action_homeFragment_to_coroutineDemo2"
+            app:destination="@id/coroutineDemo"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+        <action
+            android:id="@+id/action_homeFragment_to_radioButtons"
+            app:destination="@id/radioButtonsFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+        <action
+            android:id="@+id/action_homeFragment_to_motionLayout"
+            app:destination="@id/motionLayoutFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/roomFragment"
+        android:name="com.example.databindingexample.room.RoomFragment"
+        android:label="Room Demo"
+        tools:layout="@layout/room_fragment" />
+    <fragment
+        android:id="@+id/postsFragment"
+        android:name="com.example.databindingexample.retrofit.PostsFragment"
+        android:label="Retrofit Demo"
+        tools:layout="@layout/post_fragment" />
+    <fragment
+        android:id="@+id/radioButtonsFragment"
+        android:name="com.example.databindingexample.radiobutton.RadioButtonEx"
+        android:label="Custom Radio Buttons"
+        tools:layout="@layout/fragment_radio_button_ex"/>
+    <fragment
+        android:id="@+id/motionLayoutFragment"
+        android:name="com.example.databindingexample.MotionLayoutFragment"
+        android:label="Motion Layout"
+        tools:layout="@layout/fragment_motion_layout"/>
+</navigation>
